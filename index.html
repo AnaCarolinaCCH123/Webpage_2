@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Botón</title>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        background-color: rgb(144, 112, 112);
+        text-align: center; /* Agregamos esta propiedad para centrar las imágenes */
+      }
+      img {
+        display: inline-block;
+        margin: 10px;
+        width: 300px;
+        height: 300px;
+      }
+      #demo {
+        border-radius: 10px;
+      }
+      h2 {
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        font-size: 75px;
+        color: #ffff;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Don't touch the button!</h2>
+
+    <button type="button" onclick="cambiarImagen()">
+      <img
+        src="https://ih1.redbubble.net/image.2098330609.0103/st,small,507x507-pad,600x600,f8f8f8.u1.jpg"
+      />
+    </button>
+    <img
+      id="demo"
+      src="https://cdn.pixabay.com/photo/2013/07/12/15/40/present-150291_640.png"
+    />
+    <script>
+      let imagenOriginal = document.getElementById("demo").src;
+      function cambiarImagen() {
+        if (document.getElementById("demo").src === imagenOriginal) {
+          document.getElementById("demo").src =
+            "https://images1.memedroid.com/images/UPLOADED15/4f92e158f396b.jpeg";
+        } else {
+          document.getElementById("demo").src = imagenOriginal;
+        }
+      }
+    </script>
+  </body>
+</html>
